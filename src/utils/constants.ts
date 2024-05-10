@@ -4,11 +4,13 @@ export const TILES = {
     TOWN: 'map2',
     DUNGEON: 'dungeon',
     DUNGEON1616:'dungeon-16-16',
-    CLOUD:'cloud'
+    CLOUD:'cloud',
+    ROAD:'road'
 }
 
 export const SIZES = {
     TILE: 32,
+    NEWTILE: 64,
     TILEMINI: 16,
     PLAYER: {
         WIDTH: 48,
@@ -22,7 +24,7 @@ export const SIZES = {
         WIDTH: 16,
         HEIGHT: 16
     },
-    
+
 }
 
 export const LAYERS = {
@@ -34,12 +36,14 @@ export const LAYERS = {
     GATES: 'gates',
     MONSTR: 'monstr',
     MAGIC: 'magic',
+    ROAD:'road'
 }
 
 export const SPRITES = {
     PLAYER: 'Player',
     TILES_SPR:'tiles_spr',
-    ENEMY:'tiles_spr'
+    ENEMY:'tiles_spr',
+    LIGHT:'light'
 }
 export enum EVENTS_NAME {
     gameEnd = 'game-end',

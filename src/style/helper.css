@@ -1,0 +1,21 @@
+.playerHelperOver {
+    width: 50px;
+    height: 120px;
+    left:0;
+    bottom: 70%;
+    transform: none !important;
+    cursor: pointer;
+  }
+  .playerHelper_btn_1 {
+    border-radius: 50%;
+    background: goldenrod;
+    width: 50px;
+    height: 50px;
+  }
+  .playerHelper_btn_2 {
+    border-radius: 50%;
+    margin-top: 10px;
+    background: greenyellow;
+    width: 50px;
+    height: 50px;
+  }

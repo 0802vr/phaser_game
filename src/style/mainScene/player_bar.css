@@ -1,0 +1,381 @@
+
+.player_Bar_Over {
+    width: auto;
+    height: auto;
+    right: calc(50% - 205px);
+    bottom: 30px;
+    transform: none !important;
+    /* cursor: pointer; */
+
+  }
+
+  .player_Bar {
+    display: flex;
+    gap: 10px;
+
+
+  }
+
+  .bar_btn_1 {
+
+    background-image: url(./src/assets/player_interface/new/ico.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+
+  }
+
+  .bar_btn_2 {
+
+    background-image: url(./src/assets/player_interface/new/ico2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    transition:  .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+  }
+
+  .bar_btn_3 {
+
+    background-image: url(./src/assets/player_interface/new/ico3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+  }
+
+  .bar_btn_4 {
+
+    background-image: url(./src/assets/player_interface/new/ico4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+  }
+
+  .bar_btn_5 {
+
+    background-image: url(./src/assets/player_interface/new/ico5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+  }
+
+  .bar_btn_6 {
+
+    background-image: url(./src/assets/player_interface/new/ico6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 60px;
+    height: 60px;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+  }
+/* css modal bar */
+.plBarOver_1 {
+  /* display: none !important; */
+  opacity: 0 !important;
+  visibility: hidden;
+  transition: opacity .2s linear;
+  pointer-events: none;
+  width: 333px;
+  height: 466px;
+  left: 30px;
+  bottom: 330px;
+  background-image: url(../../assets/player_interface/new/leftInfo.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  /* border-radius: 6px;
+  border: 1px solid #B5BBE3;
+  background: rgb(70, 74, 168); */
+  transform: none !important;
+  /* cursor: pointer; */
+}
+.plBarOver_1.active {
+ /*  display: block !important; */  
+  opacity: 1 !important;
+  visibility: visible;
+  z-index: 1 !important;
+  padding: 16px 35px;
+}
+.plBarOver_1_title_1 {
+  font-family: Tickerbit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #fff;
+  text-align: center;
+
+}
+.plBarOver_1_title_2 {
+  font-family: Tickerbit;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #5DF3FC;
+  margin-top: 4px;
+  text-align: center;
+  display: none;
+
+}
+.plBarOver_1_title_3 {
+  font-family: Tickerbit;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #5DF3FC;
+  text-align: center;
+  display: none;
+}
+.plBarOver_1_img_items {
+  display: flex;
+  gap: 10px;
+}
+.plBarOver_1_img_item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+.plBarOver_1_img_item_img {
+  background-image: url(../../assets/player_interface/new/btnOver.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+.plBarOver_1_img {
+  background-image: url(../../assets/player_interface/bar_pers.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: content-box;
+  width: 120px;
+  height: 244px;
+  /* border: 1px solid #B5BBE3; */
+  padding: 20px;
+  margin: 20px auto;
+}
+.plBarOver_1_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: -5px;
+}
+.plBarOver_1_box_img_1 {
+  background-image: url(../../assets/player_interface/new/btnOver.png);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  /* border-radius: 6px; */
+  /* border: 1px solid #B5BBE3; */
+}
+.plBarOver_1_box_img_2 {
+  background-image: url(../../assets/player_interface/new/btnOver.png);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  /* border-radius: 6px; */
+  /* border: 1px solid #B5BBE3; */
+}
+.plBarOver_1_box_img_3 {
+  background-image: url(../../assets/player_interface/new/btnOver0.png);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  position: relative;
+   
+  /* border-radius: 6px; */
+  /* border: 1px solid #B5BBE3; */
+}
+.plBarOver_1_box_img_3_hand {
+  width: 35px;
+  height: 35px;
+  margin-left: 13px;
+  margin-top: 8px;
+  background-image: url(../../assets/player_interface/new/hand.png);
+  background-repeat: no-repeat;
+  background-size: contain; 
+}
+.plBarOver_1_box_img_3_overLay {
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #fff;
+  line-height: 110%;
+  transition: opacity .2s linear;
+}
+.plBarOver_1_box_img_3:hover .plBarOver_1_box_img_3_overLay {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  width: 196px;
+  height: 218px;
+  background-image: url(../../assets/player_interface/new/overlayDiv.png);
+  background-repeat: no-repeat;
+  background-size: contain;  
+  bottom: 0;
+  left: 86px; 
+}
+
+.plBarOver_3 {
+  opacity: 0 !important;
+  visibility: hidden;
+  transition: .2s linear;
+  /* display: none !important; */
+  pointer-events: none;
+  width: 374px;
+  height: 491px;
+  right: 20px;
+  bottom: 120px;
+  border-radius: 6px;
+  /* border: 1px solid #B5BBE3; */
+ /*  background: rgb(70, 74, 168); */
+  transform: none !important;
+  box-sizing: border-box;
+  background-image: url(../../assets/player_interface/new/6over.png);
+  background-repeat: no-repeat;
+ /*  background-position: center; */
+  background-size: 100%;
+  /* cursor: pointer; */
+}
+.plBarOver_3.active {
+  opacity: 1 !important;
+  visibility: visible;
+  /* display: block !important; */
+ /*  padding: 10px; */
+}
+.plBarOver_3_title_1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+  color: #fff;
+  margin-top: 29px;
+  margin-left: 15px;
+
+}
+.plBarOver_3_img_items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 14px;
+  margin-top: 30px;
+}
+.plBarOver_3_img_item {
+  display: flex;
+  gap: 6px;
+}
+.plBarOver_3_img_item_img {
+  background-image: url(../../assets/player_interface/new/btnOver.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+.plBarOver_3_img_item_img_1 {
+  background-image: url(../../assets/player_interface/new/btnOver0.png);
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  /* border-radius: 6px; */
+  /* border: 1px solid #B5BBE3; */
+}
+.plBarOver_3_img_item_img_1_gun {
+  background-image: url(../../assets/player_interface/new/gun.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  
+   
+}
+.plBarOver_3_img_item_img_overLay {
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 110%;
+  box-sizing: border-box;
+  transition: opacity .2s linear;
+}
+.plBarOver_3_img_item_img_1:hover .plBarOver_3_img_item_img_overLay {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  width: 196px;
+  height: 218px;
+  background-image: url(../../assets/player_interface/new/overlayDiv.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  left: -208px; 
+  
+}
+.plBarOver_3_box {
+  /* border-radius: 6px; */
+  border: 2px solid rgb(167, 0, 255);
+  border-bottom: 1px solid rgb(167, 0, 255);
+  margin-left: 14px;
+  width: 326px;
+  /* padding: 5px; */
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+  background-color: rgb(58, 15, 68);
+  align-items: center;
+}
+.plBarOver_3_box_text_1 {
+  margin-right: 6px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+  color:#fff;
+
+
+}
+.plBarOver_3_box_imgIn {
+  background-image: url(../../assets/player_interface/new/overMoney.png);
+  width: 20px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

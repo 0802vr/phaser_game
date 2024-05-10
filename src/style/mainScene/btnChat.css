@@ -1,0 +1,94 @@
+.player_Chat_Over {
+    width: auto;
+    height: auto;
+    left: 30px;
+    bottom: 30px;
+    transform: none !important;
+    /* cursor: pointer; */
+  }
+
+  .player_Chat {
+    box-sizing: border-box;
+    width: 388px;
+    height: 278px;
+    padding: 20px;
+    font-size: 32px;
+   /*  border-radius: 20px;
+    border: 1px grey solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* background: rgb(70, 74, 168); */
+    background-image: url(../../assets/player_interface/new/banner_chat.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .chat {
+    flex:1;
+    min-height: 80%;
+    width: 100%;
+    /* border: 1px solid grey; */
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 12px;               /* ширина scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: rgb(167, 0, 255);        /* цвет дорожки */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(58, 15, 68);    /* цвет плашки */
+      border-radius: 20px;       /* закругления плашки */
+      border: 1px solid rgb(167, 0, 255);  /* padding вокруг плашки */
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    gap: 8px;
+  }
+  .form-group {
+    width: 80%;
+  }
+  .form-control {
+    background: none;
+    border: 1px solid grey;
+    /* border-radius: 20px; */
+    background-color: rgb(58, 15, 68);
+    border: 1px solid rgb(167, 0, 255);
+    width: 94%;
+    padding: 0 10px;
+    color: #fff;
+    &:focus-visible {
+      outline-width: 0;
+    }
+   /*  padding-top: 6px; */
+   /*  height: 36px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    resize: none;
+    tab-size: 4;
+    overflow: visible; */
+
+  }
+  .btn_Submit {
+    background: none;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 0 10px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    /* height: 36px;
+    cursor: pointer; */
+  }
+  .newDiv {
+    font-size: 14px;
+    line-height: 110%;
+    color: #fff;
+  }

@@ -1,3 +1,25 @@
+@import 'style/helper.css';
+
+@import 'style/mainScene/setup_btn.css';
+@import 'style/mainScene/btnChat.css';
+@import 'style/mainScene/btnInfoPlayer.css';
+@import 'style/mainScene/infoMana.css';
+@import 'style/mainScene/player_bar.css';
+
+@import 'style/battleScene/battleScene.css';
+@import 'style/battleScene/battleBtns.css';
+
 body {
   margin: 0;
 }
+.main_Div {
+  width: 100%;
+  position: relative;
+}
+.app {
+  cursor: url('../src/assets/player_interface/new/cursor.png'), default;
+  }
+
+
+
+

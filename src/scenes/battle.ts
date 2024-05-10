@@ -56,65 +56,65 @@ export class Battle extends Phaser.Scene {
     }, this);
     /* if(this.physics.add !== null){
    this.intervel = setInterval( ()=> {
-      
-        
-      
-      
+
+
+
+
     },2000)
   } */
   this.time.addEvent({
     delay: 2000,
     callback: ()=> {
-      const fireball = new Fireball(this, this.enemy.x, this.enemy.y,SPRITES.TILES_SPR, 503);     
+      const fireball = new Fireball(this, this.enemy.x, this.enemy.y,SPRITES.TILES_SPR, 503);
       this.fireballs.add(fireball);
       this.fireballEnemy = fireball
       this.physics.moveTo(this.fireballEnemy, this.player.x, this.player.y, 200);
     },
-     
+
     loop: true
   });
   this.attackTimer = () =>{
-    
-  }
-  
 
-  
-   
+  }
+
+
+
+
     // Функция для проверки столкновения огненных шаров
 
     /* this.physics.add.overlap(this.fireballs, this.enemy, this.enemyHit(this.enemy, this.fireballs)); */
     this.physics.add.collider(this.fireballs, this.enemy, () =>{this.enemyHit(this.enemy, this.fireball)});
     /* this.fireballs.add(this.fireballEnemy); */
-     
-    
-    this.physics.add.collider(this.fireballs, this.player,()=> {this.playerHit(this.player, this.fireballEnemy)}); 
+
+
+    this.physics.add.collider(this.fireballs, this.player,()=> {this.playerHit(this.player, this.fireballEnemy)});
   }
 
   update() {
     // Обновляем заголовок шкалы здоровья
     this.playerHealthBar.width = this.player.health;
     this.enemyHealthBar.width = this.enemy.health;
-    
+
   }
 
   playerShoot() {
-    
+
   }
 
   // Обработчик столкновения огненного шара с врагом
   enemyHit(enemy, fireball) {
     console.log(fireball)
-    fireball.destroy(); 
+    fireball.destroy();
     enemy.health -= 20;
     enemy.getBody().setVelocity(0);
 
     if (enemy.health <= 0) {
       enemy.destroy();
       this.scene.stop('battle')
-      this.scene.start('DurotarScene')      
-      this.scene.start('ui-scene')    
-      this.intervel = 0;   
-      
+      this.scene.start('DurotarScene')
+      this.scene.start('ui-scene')
+      this.intervel = 0;
+
       // Враг побежден
     }
   }
@@ -129,10 +129,10 @@ export class Battle extends Phaser.Scene {
       player.destroy();
       console.log(this)
       this.scene.stop('battle')
-      this.scene.start('DurotarScene')      
-      this.scene.start('ui-scene')     
-      this.intervel = 0; 
-      
+      this.scene.start('DurotarScene')
+      this.scene.start('ui-scene')
+      this.intervel = 0;
+
       // Игрок побежден
     }
   }
@@ -197,13 +197,13 @@ class Enemy extends Phaser.GameObjects.Sprite {
     console.log(this)
     this.fireballs = this.scene.add.group();
     this.fireball = fireball;
-     
-      
-    
-    
-     
+
+
+
+
+
   } */
-  
+
   getBody(): Phaser.Physics.Arcade.Body {
     return this.body as Phaser.Physics.Arcade.Body;
   }
@@ -214,16 +214,16 @@ class Enemy extends Phaser.GameObjects.Sprite {
 class Fireball extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, texture, type) {
     super(scene, x, y, texture, type);
-    scene.add.existing(this);      
+    scene.add.existing(this);
     if(scene.physics.add !== null){
       scene.physics.add.existing(this);
       this.getBody().setVelocity(0);
     }
-     
-     
-     
-    
-    
+
+
+
+
+
   }
   getBody(): Phaser.Physics.Arcade.Body {
     return this.body as Phaser.Physics.Arcade.Body;

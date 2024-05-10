@@ -7,13 +7,13 @@ export class LoadingScene extends Scene {
   }
 
   preload(): void {
-    
+
   }
 
   create(): void {
-    /* this.scene.start('Town'); */
-    this.scene.start('DurotarScene'); 
-    /* this.scene.start('ui-scene');  */
-    
+
+    this.scene.start('MainScene');
+
+
   }
 }

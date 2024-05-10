@@ -1,0 +1,69 @@
+.playerManaOver{
+    width: auto;
+    left: 30px;
+    top: 135px;
+    transform: none !important;
+    cursor: pointer;
+  }
+  .playerMana_btns {
+    display: flex;
+    max-width: 170px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .playerMana_img_1 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }
+  .playerMana_img_2 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }
+  .playerMana_img_3 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }
+  .playerMana_img_4 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }
+  .playerMana_img_5 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }
+  .playerMana_img_6 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }
+  .playerMana_img_7 {
+    background-image: url(../../assets/player_interface/new/mana_no_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+  }

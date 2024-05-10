@@ -1,0 +1,43 @@
+.playerBtnBattleOver{
+    width: auto;
+    height: auto;
+    left: 30px;
+    bottom: 30px;
+    transform: none !important;
+    cursor: pointer;
+}
+.playerBattle_btns{
+    display: flex;
+    gap: 10px;
+}
+
+.playerBattle_btn_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: grey;
+}
+.playerBattle_btn_2{
+    width: 100px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: palevioletred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.playerBattle_btn_3{
+    width: 100px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}

@@ -1,0 +1,122 @@
+.playerSetupOver {
+
+    right:30px;
+    bottom: 30px;
+    transform: none !important;
+   /*  cursor: pointer; */
+}
+.playerSetupOver.active {
+   z-index: 1 !important;
+}
+.playerSetup {
+    width: 60px;
+    height: 60px;
+    background-image: url(./src/assets/player_interface/new/setup.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+   /*  cursor: pointer; */
+   transition: .2s linear;
+
+    &:hover {
+      width: 62px;
+      height: 62px;
+      background-size: 102%;
+
+    }
+
+  }
+
+ /*  .setup_img_battle {
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url(./src/assets/player_interface/setup.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 200px;
+    background-size: 100%;
+    cursor: pointer;
+  } */
+  .setupModalOverlay {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -30px;
+    right:-30px;
+    background: none;
+    z-index: -1;
+  }
+  .setupModalOverlay.active {
+    background: rgba(33, 33, 33, 0.2);
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+  }
+  .setupModalOverlay.active .setupModal {
+    width: 240px;
+    /* border-radius: 6px; */
+    border: 2px solid rgb(167, 0, 255);
+    position: fixed;
+    left: calc(50% - 240px);
+    top: calc(50% - 340px);
+    /* margin-left: calc(50% - 140px);
+    margin-top: calc(50% - 148px); */
+    background-color: rgb(58, 15, 68);
+    padding: 18px 20px;
+    z-index: 100;
+  }
+  .modal_title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+
+
+  }
+  .btns_modal {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+
+  }
+  .modalBtn {
+    width: 100%;
+    padding: 5px;
+    /* border-radius: 6px; */
+    /* border: 1px solid #fff; */
+    border: 1px solid rgb(167, 0, 255);
+    color: #fff;
+    background: none;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 110%;
+    cursor: url('../src/assets/player_interface/new/cursor.png'), default;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+    /* cursor: pointer; */
+  }
+  .modalBtn_Exit {
+    width: 100%;
+    padding: 5px;
+    /* border-radius: 30px; */
+    border: 1px solid rgb(167, 0, 255);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 110%;
+    color: #212121;
+    background: #fff;
+    cursor: url('../src/assets/player_interface/new/cursor.png'), default;
+    transition: .2s linear;
+    &:hover {
+      scale:1.05;
+    }
+    /* cursor: pointer; */
+  }
