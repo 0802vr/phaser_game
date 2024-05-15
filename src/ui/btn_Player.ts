@@ -17,7 +17,8 @@ export function addPlayerBtns(el){
 
     const playerInfoDiv_2_inDiv_1 = document.createElement('div');
     playerInfoDiv_2_inDiv_1.classList.add('playerInfoDiv_2_inDiv_1');
-    playerInfoDiv_2_inDiv_1.textContent = 'Harry Brasko'
+    const player = localStorage.getItem('user_name');
+    playerInfoDiv_2_inDiv_1.textContent = player
     const playerInfoDiv_2_inDiv_2 = document.createElement('div');
     playerInfoDiv_2_inDiv_2.classList.add('playerInfoDiv_2_inDiv_2');
 

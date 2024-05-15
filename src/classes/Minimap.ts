@@ -5,18 +5,20 @@ export class MinimapPipeline extends Phaser.Renderer.WebGL.Pipelines.MultiPipeli
           game: game,
           /* renderer: game.renderer, */
           fragShader: `
-                precision mediump float;
-                uniform sampler2D uMainSampler;
-                varying vec2 outTexCoord; 
-                void main(void)
-                {
-                    if (length(outTexCoord.xy - vec2(0.5, 0.5)) > 0.5) {
-                        discard;
-                    } else {
-                        gl_FragColor = texture2D(uMainSampler, outTexCoord);
-                    }
-                }   
-        `
+          precision mediump float;
+          uniform sampler2D uMainSampler;
+          varying vec2 outTexCoord;
+         
+
+          void main(void)
+          {
+              if (length(outTexCoord.xy - vec2(0.5, 0.5)) > 0.5) {
+                  discard;
+              } else {
+                  gl_FragColor = texture2D(uMainSampler, outTexCoord);
+              }
+          }   
+  `
       });
   }
 }

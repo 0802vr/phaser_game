@@ -7,12 +7,29 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>Vite + TS</title>
   </head>
-  <body>
-    <div id="app" class="app">
-
-    </div>
-    <script  src="/socket.io/socket.io.js"></script>
-    <script type="module" src="/src/main.ts"></script>
-
+  <body class="body">
+    <img class="first_page_img_boy" src="./src/assets/first_page/boy.png" alt="boy">
+    <img class="first_page_img_girl" src="./src/assets/first_page/girl.png" alt="gilr">
+    <div class="login-container">
+      <h1  class="login-container_title">Peexi-Punk</h1>
+      <p  class="login-container_text">We welcome you to the start of the demo version of the game. Have a good game!</p>
+      <form id="login-form" class="login-container_form">
+          <div class="login-form_div">
+            <label class="form_label" for="e-mail">E-Mail:</label>
+            <input class="form_input" type="text" id="e-mail" name="useremail">
+          </div>
+          <div class="login-form_div">
+            <label class="form_label" for="username">Name:</label>
+            <input class="form_input"  type="text" id="username" name="username">
+          </div>
+          <div class="login-form_div">
+            <label class="form_label" for="password">Key:</label>
+            <input class="form_input" type="password" id="password" name="password">
+          </div>  
+          <button class="form_submit" type="submit" id="login-button">Play to demo</button>
+          <a class="form_link" target="_blank" href="https://t.me/HarryBrasko">Get the key</a>
+      </form>
+    </div>    
+    <script type="module" src="/src/load.ts"></script>
   </body>
 </html>

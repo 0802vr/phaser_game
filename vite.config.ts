@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite'
-
+import {getHtmlEntries} from './buildVite'
+ 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: getHtmlEntries()
+    }
+},
+ 
   server: {
     port: 3000,
+    
     proxy: {
       '/api': {
         /* target: 'http://localhost:8081',*/
@@ -18,3 +26,6 @@ export default defineConfig({
     }
   }
 })
+
+ 
+

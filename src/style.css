@@ -1,3 +1,5 @@
+@import 'style/preloader/preloader.css';
+
 @import 'style/helper.css';
 
 @import 'style/mainScene/setup_btn.css';
@@ -5,9 +7,12 @@
 @import 'style/mainScene/btnInfoPlayer.css';
 @import 'style/mainScene/infoMana.css';
 @import 'style/mainScene/player_bar.css';
+@import 'style/mainScene/dronSetup.css';
 
 @import 'style/battleScene/battleScene.css';
 @import 'style/battleScene/battleBtns.css';
+
+
 
 body {
   margin: 0;

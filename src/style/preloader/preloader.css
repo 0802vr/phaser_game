@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Ticket';
+    src: url('../../font/Tickerbit-regular.woff') format('woff');  
+  }
+.text_Bar_Over {
+    width: 612px;    
+    left:calc(50% - 306px);    
+    bottom: 26%;
+    transform: none !important;
+    cursor: pointer;
+}
+.text_box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ticket';
+
+}
+.text_box_title {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.6;
+    line-height: 120%;
+    margin:0;
+}
+.text_box_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    text-align: center;
+    color: #fff;
+    margin:0;
+}
+.text_box_bar {
+    width: 816px;
+    height: 34px;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    margin-top: 14px;
+    position: relative;
+}
+.text_box_line {
+    width: 10px;
+    height: 34px;
+    background-color: #fff;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    animation: fullTextBar ease-in-out 5s forwards;
+}
+@keyframes fullTextBar {
+    0%{
+        width: 10px;
+    }
+    25%{
+        width: 100px;
+
+    }
+    50%{
+        width: 450px;
+    }
+    75%{
+        width: 600px;
+    }
+    100%{
+        width: 750px;
+    }
+}
+.text_box_line_load{
+    position: absolute;
+    font-size: 18px;
+    color: rgb(153,102,204);
+    bottom: 7px;
+    left: calc(50% - 36px);
+    margin: 0;
+}

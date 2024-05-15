@@ -3,7 +3,7 @@ import { Scene } from "phaser";
 import durotarJSON from '../assets/pix.json';
 import { btnHeples } from "../ui/btn_helper";
 import { io } from "socket.io-client";
-import { SIZES } from "../utils/constants";
+/* import { SIZES } from "../utils/constants"; */
 import { btns_bar_Battle } from "../ui/sceneBattle/btns_bar_Battle";
 import { addBtnsForBattle } from "../ui/sceneBattle/btnsForBattle";
 
@@ -41,7 +41,7 @@ export class newBattle extends Phaser.Scene {
   preload() {
     this.load.spritesheet('player', 'src/assets/characters/m7.png', {
       /* frameWidth: 1000, */
-      frameWidth: 300,
+      frameWidth: 1000,
       frameHeight: 300
     });
     this.load.spritesheet('enemy', 'src/assets/characters/m2.png', {
@@ -50,25 +50,27 @@ export class newBattle extends Phaser.Scene {
     })
 
     this.load.image('main_setup', 'src/assets/player_interface/setup.png');
-    this.load.image('scene', 'src/assets/battleScene.jpg');
+    this.load.image('scene', 'src/assets/oldMap/battleScene.jpg');
 
-    this.load.spritesheet('ball', 'src/assets/dungeon-16-16.png', {
+    this.load.spritesheet('ball', 'src/assets/oldMap/dungeon-16-16.png', {
       frameWidth: 16,
       frameHeight:16,
     });
-    this.load.image('tr', 'src/assets/road.png')
+    this.load.image('mapImage', 'src/assets/player_interface/new/map.png')
 
-    this.load.tilemapTiledJSON('map', 'src/assets/pix.json')
+    this.load.tilemapTiledJSON('pix', 'src/assets/pix.json')
   }
   create() {
     // Создаем игрока
     /* this.mainPhoto = this.add.image(0, 0, 'scene').setOrigin(0, 0);
     this.mainPhoto.displayWidth = this.sys.game.config.width as number;
     this.mainPhoto.displayHeight = this.sys.game.config.height as number; */
-    const map = this.make.tilemap({ key: "map" });
+
+    const map = this.make.tilemap({ key: "pix" });
     this.map = map;
-    const tileset4 = map.addTilesetImage(durotarJSON.tilesets[1].name, 'tr', SIZES.NEWTILE, SIZES.NEWTILE);//размеры перенсти в конст
-    map.createLayer('road', tileset4, 0, 0);
+    const tilesetMain = map.addTilesetImage(durotarJSON.tilesets[0].name, 'mapImage', 32, 32);//размеры перенсти в конст
+    map.createLayer('road', tilesetMain, 0, 0);
+
     this.otherFights = this.physics.add.group();
     this.enemy_1 = new Enemy(this, window.innerWidth - 300, 350, 'enemy')
     this.enemy_3 = new Enemy(this, window.innerWidth - 500, 600, 'enemy')
@@ -154,9 +156,12 @@ export class newBattle extends Phaser.Scene {
     }, this);
 
     this.playerBattle_btn_1.addEventListener('click', ()=> {
-        console.log(this.player)
-        this.player.scale = 3
+        console.log(this.player);
+        /* this.player.setSize(900, 300);
+        this.player.setOffset(0, 0); */
+        /* this.player.scale = 3 */
         this.player.play('2player', true);
+        this.enemyHit(this.enemy_3)
         /* const fireball = new Fireball(this, this.player.x - 100, this.player.y,'ball', 503);
         this.fireballs.add(fireball);
         this.physics.add.collider(this.fireballs, this.enemy_3, () =>{this.enemyHit(this.enemy_3, this.fireballs.children.entries[this.fireballs.children.entries.length -1])});
@@ -187,11 +192,14 @@ export class newBattle extends Phaser.Scene {
 
 
   }
-  enemyHit(enemy:Enemy, fireball:Fireball) {
-    console.log(enemy, fireball)
-    fireball.destroy();
-    this.fireballs.remove(fireball);
-    console.log(!fireball)
+  enemyHit(enemy:Enemy, fireball?:Fireball) {
+    if(fireball) {
+      console.log(enemy, fireball)
+      fireball.destroy();
+      this.fireballs.remove(fireball);
+      console.log(!fireball)
+    }
+    
     enemy.getBody().setVelocity(0);
     enemy.health = enemy.health - 20;
 
@@ -209,7 +217,7 @@ export class newBattle extends Phaser.Scene {
 
   // Обработчик столкновения огненного шара с игроком
   playerHit(_, fireball) {
-    console.log(fireball)
+    /* console.log(fireball) */
     if(fireball){
       fireball.destroy();
     }
@@ -286,7 +294,9 @@ class Fighter extends Phaser.Physics.Arcade.Sprite {
     super(scene, x, y, texture);
     scene.add.existing(this);
     scene.physics.add.existing(this);
-    this.scale = 1.3
+    this.setSize(300, 250);
+    this.setOffset(200, 50);
+    this.scale = 1
     /* this.setSize(160,160); */
     const anims = this.scene.anims;
     this.textureKey = texture;
@@ -298,7 +308,7 @@ class Fighter extends Phaser.Physics.Arcade.Sprite {
         end: 29
       }),
       frameRate: 10,
-      repeat: 1
+      repeat: 0
 
     });
   }

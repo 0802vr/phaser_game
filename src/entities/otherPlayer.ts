@@ -16,9 +16,9 @@ export class OtherPlayer extends Entity {
         const animsFrameRate = 6;
         this.textureKey = texture;
 
-        this.setScale(.8);
-        this.setSize(100, 140);
-        this.setOffset(10, 16)
+        this.setScale(1);
+        this.setSize(60, 60);
+        this.setOffset(25, 100)
         this.roul = roul;
         this.playerId = playerId;
 
